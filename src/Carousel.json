@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "titulo": "oblivion",
+    "src": "../images2/mv1.jpg"
+  },
+  {
+    "id": 2,
+    "titulo": "oblivion",
+    "src": "../images/carousel2.jpg"
+  },
+  {
+    "id": 3,
+    "titulo": "oblivion",
+    "src": "../images/carousel3.jpg"
+  },
+  {
+    "id": 4,
+    "titulo": "oblivion",
+    "src": "../images/carousel4.jpg"
+  }
+]

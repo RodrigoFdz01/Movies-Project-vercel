@@ -1,0 +1,24 @@
+.container-logo {
+  color: #abb7c4;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+footer {
+  background: url(../../images/hero-bg.jpg) no-repeat;
+  height: 120px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Dosis", sans-serif;
+}
+footer p {
+  color: #abb7c4;
+}
+
+.list {
+  color: #abb7c4;
+  display: inline-block;
+  margin: 0 15px 0px 0;
+}

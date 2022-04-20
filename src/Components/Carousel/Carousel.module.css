@@ -1,0 +1,11 @@
+.images {
+  width: 100%;
+  max-height: 650px;
+}
+
+.carrusel {
+  width: auto;
+  height: 100%;
+  margin: auto;
+  margin-bottom: 0;
+}

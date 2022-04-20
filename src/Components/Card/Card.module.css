@@ -1,0 +1,50 @@
+.moviecard {
+  font-family: "Nunito", sans-serif;
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+
+  width: auto;
+}
+
+.moviecard img {
+  border-radius: 8px;
+  height: 261px;
+  width: 170px;
+  margin-bottom: 10px;
+}
+.moviecard h3 {
+  font-size: 18px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 10px;
+}
+
+.ver {
+  background-color: #2196f3;
+  margin-bottom: 2px;
+  color: white;
+  font-size: 1em;
+  border: none;
+  width: 50%;
+  border-radius: 3px;
+  height: 2rem;
+}
+.moviecard button:hover {
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.check {
+  background-color: rgb(30, 172, 44);
+  margin-bottom: 2px;
+  color: white;
+  margin-left: 5px;
+  font-size: 15px;
+  border: none;
+  width: 46%;
+
+  border-radius: 3px;
+  height: 2rem;
+}
