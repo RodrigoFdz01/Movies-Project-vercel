@@ -20,7 +20,7 @@ function Card({ data }) {
         </button>
       </Link>
       <button onClick={handlefav} className={style.check}>
-        {fav ? "❤️" : "✓"}
+        {fav ? "❤️" : "+"}
       </button>
     </div>
   );
