@@ -12,7 +12,7 @@ function Footercomp() {
             <img classname={style.logo} src={logo} alt="" />
           </Link>
         </div>
-        <p>© 2022 Todos los derechos reservados.</p>
+        <p>© 2022 All rights reserved</p>
 
         <div className={style.divs}>
           <ul>
