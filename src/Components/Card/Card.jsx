@@ -16,7 +16,7 @@ function Card({ data }) {
 
       <Link to={`/PeliculaSingle/${data.titulo}`}>
         <button className={style.ver} type="button">
-          Ver
+          More
         </button>
       </Link>
       <button onClick={handlefav} className={style.check}>
