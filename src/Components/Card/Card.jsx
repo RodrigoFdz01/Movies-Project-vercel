@@ -1,13 +1,10 @@
-import { useState } from "react";
+//import { useState } from "react";
 import { Link } from "react-router-dom";
 import style from "./Card.module.css";
 
 function Card({ data }) {
-  const [fav, setfav] = useState(false);
+  // const [fav, setfav] = useState(false);
 
-  function handlefav() {
-    setfav(!fav);
-  }
   return (
     <div className={style.moviecard}>
       <img src={data.img} alt="img" />
@@ -16,12 +13,12 @@ function Card({ data }) {
 
       <Link to={`/PeliculaSingle/${data.titulo}`}>
         <button className={style.ver} type="button">
-          More
+          See More
         </button>
       </Link>
-      <button onClick={handlefav} className={style.check}>
+      {/* <button onClick={handlefav} className={style.check}>
         {fav ? "❤️" : "+"}
-      </button>
+      </button> */}
     </div>
   );
 }

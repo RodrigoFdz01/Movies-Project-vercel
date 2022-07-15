@@ -25,7 +25,11 @@ function Header() {
               </Link>
             </li>
             <li className={style.dropdownfirst}>Genres</li>
-            <li className={style.dropdownfirst}>My list</li>
+            <li className={style.dropdownfirst}>
+              <Link className={style.dropdownfirst} to="/Favoritos">
+                My list
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>

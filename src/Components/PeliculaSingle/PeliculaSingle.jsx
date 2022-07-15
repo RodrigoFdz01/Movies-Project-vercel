@@ -1,11 +1,20 @@
 import { useParams } from "react-router-dom";
-//import { useState } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import React from "react";
 import style from "./PeliculaSingle.module.css";
 
 const PeliculaSingle = ({ data }) => {
   const { nombre } = useParams();
+  const [fav, setfav] = useState(false);
+
+  function handlefav() {
+    setfav(!fav);
+    // localStorage.setItem(fav);
+  }
+  useEffect(() => {
+    localStorage.setItem("nombre", JSON.stringify(fav));
+  }, [fav]);
 
   return (
     <div className={style.containersingle}>
@@ -36,6 +45,9 @@ const PeliculaSingle = ({ data }) => {
                   Back
                 </button>
               </Link>
+              <button onClick={handlefav} className={style.check}>
+                {fav ? "❤️" : "+"}
+              </button>
             </div>
           </div>
         ))}
