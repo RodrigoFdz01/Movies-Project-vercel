@@ -7,3 +7,10 @@
   justify-content: center;
   margin: 2% 3% 2% 3%;
 }
+
+.img {
+  border-radius: 8px;
+  height: 261px;
+  width: 170px;
+  margin: 15px;
+}

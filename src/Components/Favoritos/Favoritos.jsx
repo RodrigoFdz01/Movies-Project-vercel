@@ -1,23 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 //import style from "./Favoritos.module.css";
-import { useParams } from "react-router-dom";
 
-function Favoritos({ data, fav }) {
+function Favoritos({ data }) {
   //const { data } = useParams();
-  const { nombre } = useParams();
+  const [movieStorage, setMovieStorage] = useState("");
+  const getdata = () => {
+    return localStorage.getItem("favorito");
+  };
+
+  console.log(movieStorage);
+  useEffect(() => {
+    setMovieStorage(getdata());
+  }, []);
 
   return (
     <div>
-      {data
-        .filter((Pelicula) => Pelicula.titulo === nombre)
-        .data.map((e, index, fav) => (
-          <div className="favorita" key={index}>
-            <div className="detalles">
-              <h2>{fav.titulo}</h2>
-            </div>
-          </div>
-        ))}
+      <h2>{movieStorage}</h2>
     </div>
   );
 }
