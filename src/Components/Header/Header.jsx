@@ -1,9 +1,17 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import style from "./Header.module.css";
 import { Link } from "react-router-dom";
 import logo from "./logo1.png";
+import Data from "../../peliculas";
 
 function Header() {
+  const [clases, setClases] = useState(false);
+
+  const handleClass = () => {
+    //clases === "" ? setClases("click") : setClases("");
+    setClases(!clases);
+  };
+
   return (
     <Fragment>
       <nav className={style.container}>
@@ -24,9 +32,21 @@ function Header() {
                 Movie Grid
               </Link>
             </li>
-            <li className={style.dropdownfirst}>Genres</li>
+            <li className={style.dropdownfirst} onClick={handleClass}>
+              Genres
+              <ul
+                style={{
+                  display: clases ? "" : "none",
+                }}
+              >
+                {Data.map((e) => (
+                  <li key={e.id}>{e.genero}</li>
+                ))}
+              </ul>
+            </li>
+
             <li className={style.dropdownfirst}>
-              <Link className={style.dropdownfirst} to="/Favoritos">
+              <Link className={style.dropdownfirst} to="/">
                 My list
               </Link>
             </li>
