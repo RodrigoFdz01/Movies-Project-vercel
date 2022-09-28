@@ -7,18 +7,16 @@ function Card({ data }) {
 
   return (
     <div className={style.moviecard}>
-      <img src={data.img} alt="img" />
-
-      <h3>{data.titulo}</h3>
-
       <Link to={`/PeliculaSingle/${data.titulo}`}>
-        <button className={style.ver} type="button">
+        <img src={data.img} alt="img" />
+        {/*<button className={style.ver} type="button">
           See More
-        </button>
+          </button>
+          { <button onClick={handlefav} className={style.check}>
+          {fav ? "❤️" : "+"}
+        </button> */}
       </Link>
-      {/* <button onClick={handlefav} className={style.check}>
-        {fav ? "❤️" : "+"}
-      </button> */}
+      <h3>{data.titulo}</h3>
     </div>
   );
 }

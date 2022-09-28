@@ -29,13 +29,20 @@ const PeliculaSingle = ({ data }) => {
               </h1>
               <div>
                 <li className={style.info}>
-                  <h4>Stars: {e.actores}</h4>
+                  <h4>
+                    <strong>Cast:</strong> {e.actores}
+                  </h4>
                 </li>
                 <li className={style.info}>
-                  <h4>Time: {e.duracion}</h4>
+                  <h4>
+                    <strong>Time:</strong> {e.duracion}
+                  </h4>
                 </li>
                 <li className={style.info}>
-                  <h4>Genre: {e.genero}</h4>
+                  <h4>
+                    <strong>Genre: </strong>
+                    {e.genero}
+                  </h4>
                 </li>
               </div>
               <p className={style.parraf}>Review: {e.descripcion}</p>
