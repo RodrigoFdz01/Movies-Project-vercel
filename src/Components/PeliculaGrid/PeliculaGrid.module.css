@@ -1,10 +1,9 @@
 .moviegrid {
   display: grid;
-  grid-gap: 2rem 3rem;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
-  max-width: 100%;
-  padding: 50px;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+
+  margin: 3% 3% 0% 3%;
   justify-content: center;
 }
 .back {
@@ -12,7 +11,6 @@
 }
 
 .backgrid {
-  background-color: #020d18;
   margin-left: 35%;
 }
 .input {

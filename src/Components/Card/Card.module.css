@@ -1,16 +1,15 @@
 .moviecard {
   font-family: "Nunito", sans-serif;
   color: white;
-  padding: 8px;
   border-radius: 8px;
-
-  width: auto;
+  width: 250px;
+  padding: 20px;
 }
 
 .moviecard img {
+  width: 100%;
+  height: 350px;
   border-radius: 8px;
-  height: 261px;
-  width: 170px;
   margin-bottom: 10px;
 }
 
@@ -29,7 +28,7 @@
   text-decoration: none !important;
 }
 
-.ver {
+/*.ver {
   background-color: #2196f3;
   margin-bottom: 2px;
   color: white;
@@ -55,3 +54,4 @@
   border-radius: 3px;
   height: 2rem;
 }
+*/
