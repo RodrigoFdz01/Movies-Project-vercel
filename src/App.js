@@ -10,6 +10,7 @@ import Home from "./Pages/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PeliculaSingle from "./Components/PeliculaSingle/PeliculaSingle.jsx";
 import Favoritos from "./Components/Favoritos/Favoritos.jsx";
+import Search from "./Components/Search/Search.jsx";
 
 function App() {
   return (
@@ -24,11 +25,7 @@ function App() {
         />
         <Route path="/" element={<Home />} />
 
-        <Route
-          exact
-          path="PeliculaGrid"
-          element={<PeliculaGrid data={data} />}
-        />
+        <Route exact path="PeliculaGrid" element={<PeliculaGrid />} />
 
         <Route exact path="/Favoritos" element={<Favoritos data={data} />} />
       </Routes>
