@@ -1,27 +1,5 @@
 const data = [
   {
-    id: 16,
-    titulo: "The Martian",
-    genero: "Adventure",
-    actores: "Matt Damon",
-    fecha: "2015",
-    duracion: "2h 24min",
-    img: "../images2/The martian.jpg",
-    descripcion:
-      "An astronaut becomes stranded on Mars after his team assume him dead, and must rely on his ingenuity to find a way to signal to Earth that he is alive and can survive until a potential rescue.",
-  },
-  {
-    id: 19,
-    titulo: "Back to the future",
-    genero: "Science Fiction",
-    actores: "Michael J. Fox",
-    fecha: "1985",
-    duracion: "1h 56min",
-    img: "../images2/Back to the future.jpg",
-    descripcion:
-      "Marty McFly, a 17-year-old high school student, is accidentally sent thirty years into the past in a time-traveling DeLorean invented by his close friend, the eccentric scientist Doc Brown.",
-  },
-  {
     id: 1,
     titulo: "Oblivion",
     genero: "Science Fiction",
@@ -187,6 +165,17 @@ const data = [
       "Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives.",
   },
   {
+    id: 16,
+    titulo: "The Martian",
+    genero: "Adventure",
+    actores: "Matt Damon",
+    fecha: "2015",
+    duracion: "2h 24min",
+    img: "../images2/The martian.jpg",
+    descripcion:
+      "An astronaut becomes stranded on Mars after his team assume him dead, and must rely on his ingenuity to find a way to signal to Earth that he is alive and can survive until a potential rescue.",
+  },
+  {
     id: 17,
     titulo: "Pulp Fiction",
     genero: "Drama",
@@ -207,6 +196,17 @@ const data = [
     img: "../images2/poster_inglourious.jpg",
     descripcion:
       "In Nazi-occupied France during World War II, a plan to assassinate Nazi leaders by a group of Jewish U.S. soldiers coincides with a theatre owner's vengeful plans for the same.",
+  },
+  {
+    id: 19,
+    titulo: "Back to the future",
+    genero: "Science Fiction",
+    actores: "Michael J. Fox",
+    fecha: "1985",
+    duracion: "1h 56min",
+    img: "../images2/Back to the future.jpg",
+    descripcion:
+      "Marty McFly, a 17-year-old high school student, is accidentally sent thirty years into the past in a time-traveling DeLorean invented by his close friend, the eccentric scientist Doc Brown.",
   },
 
   {
