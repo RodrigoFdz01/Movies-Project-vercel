@@ -220,6 +220,94 @@ const data = [
     descripcion:
       "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.",
   },
+  {
+    id: 21,
+    titulo: "Almost Famous",
+    genero: "Drama",
+    actores: "Edward Norton",
+    fecha: "1999",
+    duracion: "2h 19min",
+    img: "../images2/almost famous.jpg",
+    descripcion:
+      "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.",
+  },
+  {
+    id: 22,
+    titulo: "Snatch",
+    genero: "Drama",
+    actores: "Edward Norton",
+    fecha: "1999",
+    duracion: "2h 19min",
+    img: "../images2/snatch.jpg",
+    descripcion:
+      "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.",
+  },
+  {
+    id: 23,
+    titulo: "Step Brothers",
+    genero: "Drama",
+    actores: "Edward Norton",
+    fecha: "1999",
+    duracion: "2h 19min",
+    img: "../images2/step-brothers.jpg",
+    descripcion:
+      "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.",
+  },
+  {
+    id: 24,
+    titulo: "Super 8",
+    genero: "Drama",
+    actores: "Edward Norton",
+    fecha: "1999",
+    duracion: "2h 19min",
+    img: "../images2/super 8.jpg",
+    descripcion:
+      "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.",
+  },
+  {
+    id: 25,
+    titulo: "Castaway",
+    genero: "Drama",
+    actores: "Edward Norton",
+    fecha: "1999",
+    duracion: "2h 19min",
+    img: "../images2/castaway.jpg",
+    descripcion:
+      "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.",
+  },
+  {
+    id: 26,
+    titulo: "White man can't jump",
+    genero: "Drama",
+    actores: "Edward Norton",
+    fecha: "1999",
+    duracion: "2h 19min",
+    img: "../images2/wmcjump.jpg",
+    descripcion:
+      "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.",
+  },
+  {
+    id: 27,
+    titulo: "Sicario day of the soldado",
+    genero: "Drama",
+    actores: "Edward Norton",
+    fecha: "1999",
+    duracion: "2h 19min",
+    img: "../images2/sicario.jpg",
+    descripcion:
+      "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.",
+  },
+  {
+    id: 28,
+    titulo: "Old school",
+    genero: "Drama",
+    actores: "Edward Norton",
+    fecha: "1999",
+    duracion: "2h 19min",
+    img: "../images2/old school.jpg",
+    descripcion:
+      "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.",
+  },
 ];
 
 export default data;
