@@ -60,7 +60,7 @@ function Header() {
 
             <li className={style.dropdownfirst}>
               <Link className={style.dropdownfirst} to="/">
-                Rama Favs!!!
+                Rama pagination!!!
               </Link>
             </li>
           </ul>
