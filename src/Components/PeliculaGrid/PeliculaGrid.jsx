@@ -36,19 +36,19 @@ function PeliculaGrid() {
   cargarPeliculas();
 
   return (
-    <>
+    <div className={style.container}>
       <div className={style.moviegrid}>
         {abc === "" && peliculas.map((e) => <Card key={e.id} data={e} />)};
       </div>
-
       <Paginacion
+        className={style.component}
         pagina={paginaActual}
         total={getTotalPaginas()}
         onChange={(pagina) => {
           setPaginaActual(pagina);
         }}
       />
-    </>
+    </div>
   );
 }
 export default PeliculaGrid;

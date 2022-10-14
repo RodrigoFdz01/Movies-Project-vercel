@@ -1,14 +1,14 @@
 .pagination {
   text-align: center;
-  background-color: #020d18;
   color: #abb7c4;
   border-top: 1px solid #abb7c4;
   border-top: 1px solid #abb7c4;
   border-bottom: 1px solid;
-  padding: 4px;
+  padding: 1%;
+  margin: 1%;
 }
 
 .pages {
-  margin-left: 20px;
+  padding: 1%;
   text-decoration: none;
 }
