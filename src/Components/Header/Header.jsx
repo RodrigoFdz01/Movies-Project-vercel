@@ -1,11 +1,24 @@
-import React, { Fragment, useState } from "react";
+import React, {
+  Fragment,
+  useState,
+  //useCallback,
+  //useNavigate,
+  //useContext,
+} from "react";
 import style from "./Header.module.css";
 import { Link } from "react-router-dom";
 import logo from "./logo1.png";
 import Data from "../../peliculas";
+import Search from "../Search/Search";
+
+//import { GlobalContext } from "../../Context/GolbalContext";
 
 function Header() {
   const [clases, setClases] = useState(false);
+  // const [menu, setMenu] = useState("");
+  //const navigate = useNavigate();
+
+  // const { firstPathName } = useContext(GlobalContext);
 
   const handleClass = () => {
     //clases === "" ? setClases("click") : setClases("");
@@ -52,6 +65,7 @@ function Header() {
             </li>
           </ul>
         </div>
+        <Search />
       </nav>
     </Fragment>
   );

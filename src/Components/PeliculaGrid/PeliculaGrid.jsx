@@ -1,60 +1,53 @@
 import style from "./PeliculaGrid.module.css";
 import React, { useState, useEffect } from "react";
+//import { FavsContext } from "../Search/Search";
 import data from "../../peliculas";
+import Paginacion from "../Pagination/Pagination";
 
 import Card from "../Card/Card";
 
 function PeliculaGrid() {
   const [cards, setCards] = useState([]);
-  const [value, setValue] = useState("");
-
-  function handleChange(event) {
-    setValue(event.target.value);
-  }
-  //console.log(data);
 
   useEffect(() => {
     setCards(data);
+    // console.log(results);
   }, []);
+  let abc = "";
 
-  let results = [];
-  if (!value) {
-    results = cards;
-  } else {
-    //console.log(cards);
+  // abajo hasta el return todo lo nuevo de pagicancion
+  const [paginaActual, setPaginaActual] = useState(1);
+  const TOTAL_POR_PAGINA = 10;
 
-    results = cards.filter((dato) =>
-      dato.titulo.toLowerCase().includes(value.toLowerCase())
+  let peliculas = data;
+
+  const cargarPeliculas = () => {
+    peliculas = peliculas.slice(
+      (paginaActual - 1) * TOTAL_POR_PAGINA,
+      paginaActual * TOTAL_POR_PAGINA
     );
-  }
-  function handleClick() {
-    setValue("");
-  }
+  };
+
+  const getTotalPaginas = () => {
+    let cantidadTotalDePeliculas = data.length;
+    return Math.ceil(cantidadTotalDePeliculas / TOTAL_POR_PAGINA);
+  };
+  // console.log(typeof getTotalPaginas());
+  cargarPeliculas();
 
   return (
     <>
-      <div className={style.back}>
-        <div className={style.backgrid}>
-          <form>
-            <input
-              className={style.input}
-              type="text"
-              placeholder="Search..."
-              onChange={handleChange}
-              value={value}
-            />
-            <button onClick={handleClick} className={style.botonsearch}>
-              Clear
-            </button>
-          </form>
-        </div>
-        <div className={style.moviegrid}>
-          {results.map((e) => (
-            <Card key={e.id} data={e} />
-          ))}
-          ;
-        </div>
+      <div className={style.moviegrid}>
+        {abc === "" && peliculas.map((e) => <Card key={e.id} data={e} />)};
       </div>
+
+      <Paginacion
+        pagina={paginaActual}
+        total={getTotalPaginas()}
+        onChange={(pagina) => {
+          setPaginaActual(pagina);
+        }}
+      />
     </>
   );
 }
