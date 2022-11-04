@@ -52,9 +52,9 @@ function Header() {
                   display: clases ? "" : "none",
                 }}
               >
-                {Data.map((e) => (
+                {/* {Data.map((e) => (
                   <li key={e.id}>{e.genero}</li>
-                ))}
+                ))}*/}
               </ul>
             </li>
 
