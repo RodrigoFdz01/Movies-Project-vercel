@@ -1,29 +1,23 @@
-import React, {
-  Fragment,
-  useState,
-  //useCallback,
-  //useNavigate,
-  //useContext,
-} from "react";
+import React, { Fragment, useState } from "react";
 import style from "./Header.module.css";
 import { Link } from "react-router-dom";
 import logo from "./logo1.png";
 import Data from "../../peliculas";
 import Search from "../Search/Search";
 
-//import { GlobalContext } from "../../Context/GolbalContext";
+//import Favoritos from "../Favoritos/Favoritos";
+//import { GlobalContext } from "../../Context/GlobalContext";
 
 function Header() {
   const [clases, setClases] = useState(false);
-  // const [menu, setMenu] = useState("");
-  //const navigate = useNavigate();
-
-  // const { firstPathName } = useContext(GlobalContext);
 
   const handleClass = () => {
     //clases === "" ? setClases("click") : setClases("");
     setClases(!clases);
   };
+
+  // const { firstPathName } = useContext(GlobalContext);
+  // const { firstPathName, favs } = useContext(GlobalContext);
 
   return (
     <Fragment>
@@ -56,12 +50,6 @@ function Header() {
                   <li key={e.id}>{e.genero}</li>
                 ))}
               </ul>
-            </li>
-
-            <li className={style.dropdownfirst}>
-              <Link className={style.dropdownfirst} to="/">
-                Rama Favs!!!
-              </Link>
             </li>
           </ul>
         </div>

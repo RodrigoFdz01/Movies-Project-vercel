@@ -6,14 +6,15 @@ import style from "./PeliculaSingle.module.css";
 
 const PeliculaSingle = ({ data }) => {
   const { nombre } = useParams();
-  const [fav, setfav] = useState(true);
+  const [fav, setfav] = useState([]);
 
   function handlefav() {
     setfav(!fav);
   }
   const saveLocal = () => {
-    localStorage.setItem("favorito", fav);
-    alert("Movie added to favs!!!");
+    localStorage.setItem("favs", fav);
+    //alert("Movie added to favs!!!");
+    console.log();
   };
 
   return (

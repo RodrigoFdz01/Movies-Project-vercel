@@ -1,24 +1,23 @@
-//import { useState } from "react";
+//import { useContext } from "react";
 import { Link } from "react-router-dom";
 import style from "./Card.module.css";
+//import { GlobalContext } from "../../Context/GlobalContext";
 
 function Card({ data }) {
-  // const [fav, setfav] = useState(false);
+  //const [fav, setfav] = useState(false);
+  // const handleFav = () => {
+  //   setfav(!fav);
+  // };
+  //console.log(data.id);
 
   return (
     <div className={style.moviecard}>
-      <img src={data.img} alt="img" />
-
-      <h3>{data.titulo}</h3>
-
+      <button className={style.check}>o</button>
       <Link to={`/PeliculaSingle/${data.titulo}`}>
-        <button className={style.ver} type="button">
-          See More
-        </button>
+        <img src={data.img} alt="img" />
+
+        <h3>{data.titulo}</h3>
       </Link>
-      {/* <button onClick={handlefav} className={style.check}>
-        {fav ? "❤️" : "+"}
-      </button> */}
     </div>
   );
 }
