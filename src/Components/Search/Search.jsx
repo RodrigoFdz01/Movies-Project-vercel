@@ -15,12 +15,6 @@ const Search = () => {
   }, []);
 
   //
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSearch("");
-    //scroll();
-    console.log(results);
-  };
   const handleChange = (e) => {
     setSearch(e.target.value);
   };
@@ -33,6 +27,11 @@ const Search = () => {
       dato.titulo.toLowerCase().includes(search.toLowerCase())
     );
   }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(results);
+    setSearch("");
+  };
 
   return (
     <form className="formulario" onSubmit={handleSubmit}>
@@ -45,8 +44,9 @@ const Search = () => {
         placeholder="Buscar..."
         required
       />
+
       <button className={style.botonsearch} type="submit">
-        Buscar
+        Search
       </button>
     </form>
   );
