@@ -1,26 +1,28 @@
 import style from "./PeliculaGrid.module.css";
 import React, { useState, useEffect } from "react";
 //import { FavsContext } from "../Search/Search";
-import data from "../../peliculas";
-
+//import data from "../../peliculas";
 import Card from "../Card/Card";
+import dataApi from "../../MoviesfromApi";
 
 function PeliculaGrid() {
-  const [cards, setCards] = useState([]);
+  const [populares, setpopulares] = useState([]);
+  //const [cards, setCards] = useState([]);
 
   //const { results } = useContext(FavsContext);
   useEffect(() => {
-    setCards(data);
-
-    // console.log(results);
+    //setpopulares(dataApi);
+    dataApi(setpopulares);
   }, []);
-  let abc = "";
+
   return (
     <>
       <div className={style.back}>
         <div className={style.backgrid}></div>
         <div className={style.moviegrid}>
-          {abc === "" && cards.map((e) => <Card key={e.id} data={e} />)};
+          {populares.map((e) => (
+            <Card key={e.id} dataApi={e} />
+          ))}
         </div>
       </div>
     </>

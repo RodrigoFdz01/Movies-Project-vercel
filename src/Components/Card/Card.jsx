@@ -1,22 +1,21 @@
-//import { useContext } from "react";
+//import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import style from "./Card.module.css";
 //import { GlobalContext } from "../../Context/GlobalContext";
 
-function Card({ data }) {
-  //const [fav, setfav] = useState(false);
+function Card({ dataApi }) {
   // const handleFav = () => {
   //   setfav(!fav);
   // };
-  //console.log(data.id);
-
+  //const urlImagen = `https://image.tmdb.org/t/p/w300/${backdrop_path}`;
   return (
     <div className={style.moviecard}>
-      <button className={style.check}>o</button>
-      <Link to={`/PeliculaSingle/${data.titulo}`}>
-        <img src={data.img} alt="img" />
-
-        <h3>{data.titulo}</h3>
+      <Link to={`/PeliculaSingle/${dataApi.title}`}>
+        <img
+          src={"https://image.tmdb.org/t/p/w400/" + dataApi.backdrop_path}
+          alt="img"
+        />
+        <h3>{dataApi.title}</h3>
       </Link>
     </div>
   );
