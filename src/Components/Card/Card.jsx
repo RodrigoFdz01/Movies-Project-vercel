@@ -12,7 +12,7 @@ function Card({ dataApi }) {
     <div className={style.moviecard}>
       <Link to={`/PeliculaSingle/${dataApi.title}`}>
         <img
-          src={"https://image.tmdb.org/t/p/w400/" + dataApi.backdrop_path}
+          src={"https://image.tmdb.org/t/p/w300/" + dataApi.poster_path}
           alt="img"
         />
         <h3>{dataApi.title}</h3>

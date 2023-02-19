@@ -2,13 +2,13 @@
   font-family: "Nunito", sans-serif;
   padding: 8px;
   border-radius: 8px;
-  width: auto;
+  max-height: 500px;
 }
 
 .moviecard img {
   border-radius: 8px;
-  height: 261px;
-  width: 170px;
+  height: 400px;
+  width: auto;
   margin-bottom: 10px;
 }
 .moviecard h3 {

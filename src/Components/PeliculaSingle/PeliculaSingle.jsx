@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import React from "react";
 import style from "./PeliculaSingle.module.css";
 
-const PeliculaSingle = ({ data }) => {
+const PeliculaSingle = ({ dataApi }) => {
   const { nombre } = useParams();
   const [fav, setfav] = useState([]);
 
@@ -14,32 +14,35 @@ const PeliculaSingle = ({ data }) => {
   const saveLocal = () => {
     localStorage.setItem("favs", fav);
     //alert("Movie added to favs!!!");
-    console.log();
   };
-
+  //console.log(dataApi);
   return (
     <div className={style.containersingle}>
-      {data
-        .filter((tarjeta) => tarjeta.titulo === nombre)
+      {dataApi
+        .filter((tarjeta) => tarjeta.title === nombre)
         .map((e, index) => (
           <div className={style.movieSingle} key={index}>
-            <img src={e.img} alt="img" />
+            <img
+              src={"https://image.tmdb.org/t/p/w300/" + dataApi.poster_path}
+              alt="img"
+            />
             <div className={style.detalles}>
               <h1>
-                {e.titulo} | <span className={style.fecha}>{e.fecha}</span>
+                {e.title} |{" "}
+                <span className={style.fecha}>{e.release_date}</span>
               </h1>
               <div>
                 <li className={style.info}>
-                  <h4>Stars: {e.actores}</h4>
+                  <h4>Stars:</h4>
                 </li>
                 <li className={style.info}>
-                  <h4>Time: {e.duracion}</h4>
+                  <h4>Votos: {e.vote_average}</h4>
                 </li>
                 <li className={style.info}>
-                  <h4>Genre: {e.genero}</h4>
+                  <h4>Genre: </h4>
                 </li>
               </div>
-              <p className={style.parraf}>Review: {e.descripcion}</p>
+              <p className={style.parraf}>Review: {e.overview}</p>
 
               <Link to={`/Peliculagrid/`}>
                 <button className={style.buttonback} type="button">

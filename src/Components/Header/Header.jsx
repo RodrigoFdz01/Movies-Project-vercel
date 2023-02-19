@@ -1,15 +1,17 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import style from "./Header.module.css";
 import { Link } from "react-router-dom";
 import logo from "./logo1.png";
-import Data from "../../peliculas";
 import Search from "../Search/Search";
+//import Data from "../../peliculas";
+import dataApi from "../../MoviesfromApi";
 
 //import Favoritos from "../Favoritos/Favoritos";
 //import { GlobalContext } from "../../Context/GlobalContext";
 
 function Header() {
   const [clases, setClases] = useState(false);
+  const [genres, setGenre] = useState([]);
 
   const handleClass = () => {
     //clases === "" ? setClases("click") : setClases("");
@@ -18,6 +20,11 @@ function Header() {
 
   // const { firstPathName } = useContext(GlobalContext);
   // const { firstPathName, favs } = useContext(GlobalContext);
+
+  useEffect(() => {
+    //setpopulares(dataApi);
+    dataApi(setGenre);
+  }, []);
 
   return (
     <Fragment>
@@ -46,8 +53,8 @@ function Header() {
                   display: clases ? "" : "none",
                 }}
               >
-                {Data.map((e) => (
-                  <li key={e.id}>{e.genero}</li>
+                {genres.map((e) => (
+                  <li key={e.id}>{e.genre_ids[0]}</li>
                 ))}
               </ul>
             </li>

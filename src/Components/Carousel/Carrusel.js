@@ -14,7 +14,7 @@ function Carrusel() {
         <img className={style.images} src={image1} alt="First slide" />
         <Carousel.Caption>
           <h3>BlockBuster Movies</h3>
-          <p>Some of my favourites movies</p>
+          <p>Find your favorite movie</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -22,21 +22,21 @@ function Carrusel() {
 
         <Carousel.Caption>
           <h3>BlockBuster Movies</h3>
-          <p>Some of my favourites movies</p>
+          <p>Find your favorite movie</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img className={style.images} src={image3} alt="Third slide" />
         <Carousel.Caption>
           <h3>BlockBuster Movies</h3>
-          <p>Some of my favourites movies</p>
+          <p>Find your favorite movie</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img className={style.images} src={image4} alt="Third slide" />
         <Carousel.Caption>
           <h3>BlockBuster Movies</h3>
-          <p>Some of my favourites movies</p>
+          <p>Find your favorite movie</p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
