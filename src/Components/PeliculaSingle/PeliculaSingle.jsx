@@ -1,21 +1,21 @@
 import { useParams } from "react-router-dom";
-import { useState } from "react";
+//import { useState } from "react";
 import { Link } from "react-router-dom";
 import React from "react";
 import style from "./PeliculaSingle.module.css";
 
 const PeliculaSingle = ({ dataApi }) => {
   const { nombre } = useParams();
-  const [fav, setfav] = useState([]);
+  // const [fav, setfav] = useState([]);
 
-  function handlefav() {
-    setfav(!fav);
-  }
-  const saveLocal = () => {
-    localStorage.setItem("favs", fav);
-    //alert("Movie added to favs!!!");
-  };
-  //console.log(dataApi);
+  // function handlefav() {
+  //   setfav(!fav);
+  // }
+  // const saveLocal = () => {
+  //   localStorage.setItem("favs", fav);
+  //   //alert("Movie added to favs!!!");
+  // };
+
   return (
     <div className={style.containersingle}>
       {dataApi
@@ -49,9 +49,9 @@ const PeliculaSingle = ({ dataApi }) => {
                   Back
                 </button>
               </Link>
-              <button onClick={(handlefav, saveLocal)} className={style.check}>
+              {/* <button onClick={(handlefav, saveLocal)} className={style.check}>
                 {fav ? "+" : "❤️"}
-              </button>
+              </button> */}
             </div>
           </div>
         ))}

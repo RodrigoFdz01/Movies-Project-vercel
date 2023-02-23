@@ -10,7 +10,7 @@ import Home from "./Pages/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PeliculaSingle from "./Components/PeliculaSingle/PeliculaSingle.jsx";
 import Favoritos from "./Components/Favoritos/Favoritos.jsx";
-import dataApi from "./MoviesfromApi.js";
+import dataApi from "./MoviesfromApi";
 //import Search from "./Components/Search/Search.jsx";
 
 function App() {

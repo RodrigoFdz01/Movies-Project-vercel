@@ -28,7 +28,7 @@ function Header() {
 
   return (
     <Fragment>
-      <nav className={style.container}>
+      <header className={style.container}>
         <div id="logohome">
           <Link to="/">
             <img src={logo} alt="logo" width="119" height="58" />
@@ -61,7 +61,7 @@ function Header() {
           </ul>
         </div>
         <Search />
-      </nav>
+      </header>
     </Fragment>
   );
 }
