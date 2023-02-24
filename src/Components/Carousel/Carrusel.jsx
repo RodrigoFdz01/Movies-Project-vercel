@@ -2,9 +2,8 @@ import { Carousel } from "react-bootstrap";
 //import CardHeader from "react-bootstrap/esm/CardHeader";
 import image1 from "../../images/martian.png";
 import image2 from "../../images/guardians.jpeg";
-import image3 from "../../images/carousel3.jpg";
+import image3 from "../../images/carousel1.jpg";
 import image4 from "../../images/carousel4.jpg";
-
 import style from "./Carousel.module.css";
 
 function Carrusel() {
@@ -17,14 +16,15 @@ function Carrusel() {
           <p>Find your favorite movie</p>
         </Carousel.Caption>
       </Carousel.Item>
+
       <Carousel.Item>
         <img className={style.images} src={image2} alt="Second slide" />
-
         <Carousel.Caption>
           <h3>BlockBuster Movies</h3>
           <p>Find your favorite movie</p>
         </Carousel.Caption>
       </Carousel.Item>
+
       <Carousel.Item>
         <img className={style.images} src={image3} alt="Third slide" />
         <Carousel.Caption>
@@ -32,8 +32,9 @@ function Carrusel() {
           <p>Find your favorite movie</p>
         </Carousel.Caption>
       </Carousel.Item>
+
       <Carousel.Item>
-        <img className={style.images} src={image4} alt="Third slide" />
+        <img className={style.images} src={image4} alt="Fourth slide" />
         <Carousel.Caption>
           <h3>BlockBuster Movies</h3>
           <p>Find your favorite movie</p>

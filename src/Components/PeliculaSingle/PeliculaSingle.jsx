@@ -1,10 +1,17 @@
 import { useParams } from "react-router-dom";
-//import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import React from "react";
 import style from "./PeliculaSingle.module.css";
+import dataApi from "../../MoviesfromApi";
 
-const PeliculaSingle = ({ dataApi }) => {
+const PeliculaSingle = () => {
+  const [singleInfo, setSingleInfo] = useState([]);
+
+  useEffect(() => {
+    //setpopulares(dataApi);
+    dataApi(setSingleInfo);
+  }, []);
   const { nombre } = useParams();
   // const [fav, setfav] = useState([]);
 
@@ -18,12 +25,12 @@ const PeliculaSingle = ({ dataApi }) => {
 
   return (
     <div className={style.containersingle}>
-      {dataApi
+      {singleInfo
         .filter((tarjeta) => tarjeta.title === nombre)
         .map((e, index) => (
           <div className={style.movieSingle} key={index}>
             <img
-              src={"https://image.tmdb.org/t/p/w300/" + dataApi.poster_path}
+              src={"https://image.tmdb.org/t/p/w500" + e.poster_path}
               alt="img"
             />
             <div className={style.detalles}>
@@ -39,7 +46,7 @@ const PeliculaSingle = ({ dataApi }) => {
                   <h4>Votos: {e.vote_average}</h4>
                 </li>
                 <li className={style.info}>
-                  <h4>Genre: </h4>
+                  <h4>Genre: {e.genre_ids[0]}</h4>
                 </li>
               </div>
               <p className={style.parraf}>Review: {e.overview}</p>

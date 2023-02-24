@@ -4,14 +4,15 @@ import { Link } from "react-router-dom";
 import logo from "./logo1.png";
 import Search from "../Search/Search";
 //import Data from "../../peliculas";
-import dataApi from "../../MoviesfromApi";
+//import dataApi from "../../MoviesfromApi";
+import Genres from "../Genre/Genres";
 
 //import Favoritos from "../Favoritos/Favoritos";
 //import { GlobalContext } from "../../Context/GlobalContext";
 
 function Header() {
   const [clases, setClases] = useState(false);
-  const [genres, setGenre] = useState([]);
+  // const [genres, setGenre] = useState([]);
 
   const handleClass = () => {
     //clases === "" ? setClases("click") : setClases("");
@@ -23,7 +24,7 @@ function Header() {
 
   useEffect(() => {
     //setpopulares(dataApi);
-    dataApi(setGenre);
+    //dataApi(setGenre);
   }, []);
 
   return (
@@ -53,9 +54,7 @@ function Header() {
                   display: clases ? "" : "none",
                 }}
               >
-                {genres.map((e) => (
-                  <li key={e.id}>{e.genre_ids[0]}</li>
-                ))}
+                <Genres />
               </ul>
             </li>
           </ul>

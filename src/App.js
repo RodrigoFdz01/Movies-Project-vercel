@@ -12,7 +12,7 @@ import PeliculaSingle from "./Components/PeliculaSingle/PeliculaSingle.jsx";
 import Favoritos from "./Components/Favoritos/Favoritos.jsx";
 import dataApi from "./MoviesfromApi";
 //import Search from "./Components/Search/Search.jsx";
-
+//console.log(dataApi.info);
 function App() {
   return (
     <BrowserRouter>

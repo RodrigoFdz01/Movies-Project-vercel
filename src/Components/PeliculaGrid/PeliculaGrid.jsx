@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 //import data from "../../peliculas";
 import Card from "../Card/Card";
 import dataApi from "../../MoviesfromApi";
+import NextPage from "../NextPage/NextPage";
 
 function PeliculaGrid() {
   const [populares, setpopulares] = useState([]);
@@ -24,6 +25,7 @@ function PeliculaGrid() {
             <Card key={e.id} dataApi={e} />
           ))}
         </div>
+        <NextPage />
       </div>
     </>
   );
