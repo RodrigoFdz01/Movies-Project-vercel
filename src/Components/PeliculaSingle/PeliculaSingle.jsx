@@ -40,16 +40,28 @@ const PeliculaSingle = () => {
               </h1>
               <div>
                 <li className={style.info}>
-                  <h4>Stars:</h4>
+                  <p className={style.parraf}>Review: {e.overview}</p>
                 </li>
                 <li className={style.info}>
-                  <h4>Votos: {e.vote_average}</h4>
+                  <h4>Vote: {e.vote_average}</h4>
                 </li>
                 <li className={style.info}>
-                  <h4>Genre: {e.genre_ids[0]}</h4>
+                  <h4>Genre: {e.genre_ids}</h4>
                 </li>
+                <div>
+                  <h4>Cast:</h4>
+                  <div className="cast">
+                    {singleInfo.map((actor) => (
+                      <img
+                        src={
+                          "https://image.tmdb.org/t/p/w80" + actor.poster_path
+                        }
+                        alt="img"
+                      />
+                    ))}
+                  </div>
+                </div>
               </div>
-              <p className={style.parraf}>Review: {e.overview}</p>
 
               <Link to={`/Peliculagrid/`}>
                 <button className={style.buttonback} type="button">
