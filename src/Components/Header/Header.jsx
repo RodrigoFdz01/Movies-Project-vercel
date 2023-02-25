@@ -1,33 +1,35 @@
-import React, {
-  Fragment,
-  useState,
-  //useCallback,
-  //useNavigate,
-  //useContext,
-} from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import style from "./Header.module.css";
 import { Link } from "react-router-dom";
 import logo from "./logo1.png";
-import Data from "../../peliculas";
 import Search from "../Search/Search";
+//import Data from "../../peliculas";
+//import dataApi from "../../MoviesfromApi";
+import Genres from "../Genre/Genres";
 
-//import { GlobalContext } from "../../Context/GolbalContext";
+//import Favoritos from "../Favoritos/Favoritos";
+//import { GlobalContext } from "../../Context/GlobalContext";
 
 function Header() {
   const [clases, setClases] = useState(false);
-  // const [menu, setMenu] = useState("");
-  //const navigate = useNavigate();
-
-  // const { firstPathName } = useContext(GlobalContext);
+  // const [genres, setGenre] = useState([]);
 
   const handleClass = () => {
     //clases === "" ? setClases("click") : setClases("");
     setClases(!clases);
   };
 
+  // const { firstPathName } = useContext(GlobalContext);
+  // const { firstPathName, favs } = useContext(GlobalContext);
+
+  useEffect(() => {
+    //setpopulares(dataApi);
+    //dataApi(setGenre);
+  }, []);
+
   return (
     <Fragment>
-      <nav className={style.container}>
+      <header className={style.container}>
         <div id="logohome">
           <Link to="/">
             <img src={logo} alt="logo" width="119" height="58" />
@@ -52,21 +54,13 @@ function Header() {
                   display: clases ? "" : "none",
                 }}
               >
-                {/* {Data.map((e) => (
-                  <li key={e.id}>{e.genero}</li>
-                ))}*/}
+                <Genres />
               </ul>
-            </li>
-
-            <li className={style.dropdownfirst}>
-              <Link className={style.dropdownfirst} to="/">
-                My list
-              </Link>
             </li>
           </ul>
         </div>
         <Search />
-      </nav>
+      </header>
     </Fragment>
   );
 }
