@@ -15,8 +15,8 @@ function Card({ dataApi }) {
           src={"https://image.tmdb.org/t/p/w500" + dataApi.poster_path}
           alt="img"
         />
-        <h3>{dataApi.title}</h3>
       </Link>
+      <h3>{dataApi.title}</h3>
     </div>
   );
 }
