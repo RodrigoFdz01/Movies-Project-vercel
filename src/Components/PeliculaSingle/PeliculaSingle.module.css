@@ -12,13 +12,15 @@
 }
 
 .detalles {
-  color: rgb(149, 166, 163);
+  color: rgb(199, 207, 206);
   padding: 2em;
   font-family: "Courier New", Courier, monospace;
 
   margin: auto;
 }
-
+.detalles h1 {
+  font-size: 2rem;
+}
 .fecha {
   font-weight: lighter;
   font-style: oblique;
