@@ -1,0 +1,23 @@
+.containergenre {
+  background-color: rgb(32, 34, 46);
+  border-radius: 5px;
+  top: 4rem;
+  padding: 18px;
+  width: 360px;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: absolute;
+}
+.item {
+  list-style: none;
+  padding: 1vh;
+}
+.hipervinculo {
+  color: white;
+  text-decoration: none;
+}
+.hipervinculo:hover {
+  background-color: rgb(224, 231, 231);
+  color: black;
+}
