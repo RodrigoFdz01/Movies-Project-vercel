@@ -8,6 +8,17 @@
 .ul {
   margin-top: 10px;
 }
+.container_ul {
+  background-color: rgb(32, 34, 46);
+  border-radius: 5px;
+  top: 4rem;
+  padding: 18px;
+  width: 360px;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: absolute;
+}
 
 .dropdownfirst {
   display: inline-block;
@@ -19,4 +30,19 @@
   font-size: 1rem;
   cursor: pointer;
   text-align: center;
+}
+.arrow {
+  top: 5px;
+  right: -12px;
+  font-size: 0.6rem;
+  cursor: pointer;
+  color: white;
+}
+.arrow::after {
+  position: absolute;
+  top: 5px;
+  right: -12px;
+  font-size: 0.6rem;
+  cursor: pointer;
+  transform: rotate(180deg);
 }

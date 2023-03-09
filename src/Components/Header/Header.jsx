@@ -48,8 +48,9 @@ function Header() {
               </Link>
             </li>
             <li className={style.dropdownfirst} onClick={handleClass}>
-              Genres
+              Genres <span className={style.arrow}>V</span>
               <ul
+                className={style.container_ul}
                 style={{
                   display: clases ? "" : "none",
                 }}

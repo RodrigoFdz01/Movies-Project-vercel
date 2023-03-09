@@ -1,14 +1,14 @@
 import React from "react";
-
+import style from "./NextPage.module.css";
 const NextPage = ({ lengthMovies }) => {
   return (
-    <div>
+    <div className={style.button_container}>
       {lengthMovies < 20 ? (
-        <button name="-">🢀 Anterior</button>
+        <button className={style.button}>Siguiente</button>
       ) : (
         <>
-          <button name="-"> - Anterior</button>
-          <button name="+">Siguiente + </button>
+          <button className={style.button}> - Anterior</button>
+          <button className={style.button}>Siguiente + </button>
         </>
       )}
     </div>
