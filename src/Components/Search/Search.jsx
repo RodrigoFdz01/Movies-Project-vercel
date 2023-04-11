@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 //import { scroll } from "../../utils/scroll";
 import style from "./search.module.css";
-import data from "../../peliculas";
+//import data from "../../peliculas";
 
 //export const FavsContext = createContext();
 
@@ -11,7 +11,7 @@ const Search = () => {
   const [cards, setCards] = useState("");
 
   useEffect(() => {
-    setCards(data);
+    setCards();
   }, []);
 
   //

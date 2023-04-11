@@ -54,7 +54,7 @@ const PeliculaSingle = () => {
                     {singleInfo.map((actor) => (
                       <img
                         src={
-                          "https://image.tmdb.org/t/p/w80" + actor.poster_path
+                          "https://image.tmdb.org/t/p/w50" + actor.poster_path
                         }
                         alt="img"
                       />
