@@ -9,3 +9,12 @@
   margin: auto;
   margin-bottom: 0;
 }
+.pictures1 {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  max-width: 1920px;
+  position: absolute;
+  width: 100%;
+}

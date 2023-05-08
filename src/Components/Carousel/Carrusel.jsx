@@ -12,21 +12,26 @@ import dataApi from "../../MoviesfromApi";
 
 function Carrusel() {
   const [backdrops, setbackdrops] = useState([]);
-  // console.log(backdrops[0]);
+  console.log(backdrops);
+  //console.log(backdrops[0].id);
   useEffect(() => {
     dataApi(setbackdrops);
   }, []);
 
+  //  const urlImagen = {'https://image.tmdb.org/t/p/w300/${backdrop_path'}
+
+  // https://image.tmdb.org/t/p/w300/${backdrop_path}
   return (
     <>
       {backdrops
         .filter((i, index) => index < 4)
         .map((e, i, index) => (
-          <img
-            className={style.images}
-            src={"https://image.tmdb.org/t/p/w500" + e.backdrop_path}
-            alt="-/"
-          />
+          <div className={style.pictures1}>
+            <img
+              src={"https://image.tmdb.org/t/p/original" + e.backdrop_path}
+              alt="-/"
+            />
+          </div>
         ))}
       <Carousel className={style.carrusel}>
         <Carousel.Item>
